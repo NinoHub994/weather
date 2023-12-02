@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import { NavigationProvider } from './components/Wrapper/NavigationProvider';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export interface city  {
+  cityId: '5454711',
+  name: 'Albuquerque',
+  country: 'US',
+  altCountry: '',
+  muni: '',
+  muniSub: '',
+  featureClass: 'P',
+  featureCode: 'PPLA2',
+  adminCode: 'NM',
+  population: 545852,
+  loc: {
+    type: 'Point',
+    coordinates: [-106.65114, 35.084] 
+  }
 }
 
-export default App;
+ 
+
+
+const App = () => {
+  return (
+  <div>
+    <NavigationProvider />
+  </div>
+  )
+}
+
+export default App

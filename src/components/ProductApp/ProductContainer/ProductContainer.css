@@ -1,0 +1,7 @@
+.Container{
+    border: 2px solid blue;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 600px;
+}

@@ -1,0 +1,28 @@
+.card {
+    min-height: 300px;
+    width: 300px !important;
+    border: 2px solid green;
+}
+
+.card-body {
+    font-size: 0.8rem;
+}
+
+.card-body h2 {
+    height: 2%;
+}
+
+img {
+    height: 200px !important;
+    width: 200px !important;
+}
+
+.container_dark {
+    background-color: black;
+    color: white;
+}
+
+.container_white {
+    background-color: white;
+    color: black;
+}
