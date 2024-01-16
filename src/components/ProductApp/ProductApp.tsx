@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./ProductApp.css";
 import ProductCard from "./ProductCard/ProductCard"
-import ProductContainer from "./ProductCard/ProductCard";
+// import ProductContainer from "./ProductCard/ProductCard";
 import { Counter } from "./Counter/Counter";
 import { QuantityButton } from "./QuantityButton/QuantityButton";
 
@@ -19,7 +19,7 @@ export interface Product {
 }
 
 const ProductApp = () => {
-  const[cardTheme, setCardTheme] = useState('dark');
+  const[cardTheme, setCardTheme] = useState('white');
   let [total, setTotal] = useState(0);
   const [items, setItems] = useState<Product[]>([]);
   const ctotal = () => {
@@ -31,7 +31,7 @@ const ProductApp = () => {
   };
   async function fetchData() {
     // get the data from the api
-    let response = await fetch("https://fakestoreapi.com/products");
+    let response = await fetch(url);
     let data = await response.json();
     data = data.map(
       (Element: {
@@ -58,7 +58,7 @@ const ProductApp = () => {
   items.forEach((el) => ({ ...el, quantity: 0 }));
   //console.log(phones)
   return (
-    <div className="App container d-flex justify-content-start align-items-center flex-column">
+    <div className={`${cardTheme} App container d-flex justify-content-start align-items-center flex-column`}>
       <div className="row">
       <CardTheme.Provider value={cardTheme}>
         {items.map((item) => (
@@ -81,7 +81,7 @@ const ProductApp = () => {
           </div>
         ))}
         <h2>{total.toFixed(2) + "$"}</h2>
-        </CardTheme.Provider>
+      </CardTheme.Provider>
       </div>
       <div className="row ">
         <Counter />

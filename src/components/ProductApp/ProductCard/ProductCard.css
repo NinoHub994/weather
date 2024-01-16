@@ -17,12 +17,12 @@ img {
     width: 200px !important;
 }
 
-.container_dark {
+.dark {
     background-color: black;
     color: white;
 }
 
-.container_white {
+.white {
     background-color: white;
     color: black;
 }

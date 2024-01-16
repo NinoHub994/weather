@@ -34,11 +34,11 @@ export const QuantityButton = (props:ButtonProps) => {
   }
 
   const dark = () =>{
-    setCardTheme(theme => theme==='container_white'?'container_dark':'container_dark')
+    setCardTheme(theme => theme ==='white'?'dark':'white')
   }
 
   const white = () =>{
-    setCardTheme(theme => theme==='container_dark'?'container_white':'container_white')
+    setCardTheme(theme => theme ==='dark'?'white':'dark')
   }
 
   //const toggleY = () => {
@@ -51,8 +51,8 @@ export const QuantityButton = (props:ButtonProps) => {
       <h2>{x}</h2>
       <button onClick={increment} className="btn btn-success">+</button>
       <div>
-        <button className="btn btn-primary ms-3 me-3" onClick={dark}>dark</button>
         <button className="btn btn-secondary" onClick={white}>white</button>
+        <button className="btn btn-primary ms-3 me-3" onClick={dark}>dark</button>
       </div>
     </div>
   )
